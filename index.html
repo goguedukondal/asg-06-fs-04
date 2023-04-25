@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function Nav(){
+            return <div style={{display:'flex', justifyContent:'space-around',alignItems:'center'}}>
+                <div>
+                    <img src ='https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2017/08/hootsuite-logo-500x430.png' width='70px' height='70px'/>
+                    </div>
+                <div>
+                    <a href='#' style={{color:'black',textDecoration:'none',marginRight:'20px'}}><b>Platform</b></a>
+                    <a href='#' style={{color:'black',textDecoration:'none',marginRight:'20px'}}><b>Plans</b></a>
+                     <a href='#' style={{color:'black',textDecoration:'none',marginRight:'20px'}}><b>Enterprise</b></a>
+                      <a href='#' style={{color:'black',textDecoration:'none',marginRight:'20px'}}><b>Resources</b></a>
+                       <a href='#'style={{color:'black',textDecoration:'none',marginRight:'20px'}}><b>Education</b></a> 
+                    </div>
+                <div>
+                     <a href='#' style={{color:'black',textDecoration:'none',marginRight:'20px'}}>ContactUS</a>
+                      <a href='#' style={{color:'black',textDecoration:'none',marginRight:'20px'}}>LogIn</a>
+                      <button style={{backgroundColor:'green',border:'none',color:'white',height:'40px',width:'100px',cursor:'pointer'}}>SignUp</button>
+                    </div>
+                </div>
+        }
+        function Demo(){
+            return <div style={{backgroundColor:'darkblue',textAlign:'center',color:'white',padding:'25px'}}>
+                    <h1>See value from social sooner</h1>
+                    <p>Our training and strategic services have helped<br/>
+                        thousands of organizations succed on social</p><br/>
+                    <button style={{backgroundColor:'green',border:'none',color:'white',height:'40px',width:'120px',cursor:'pointer'}}><b>Request a Demo</b></button>
+                </div>
+        }
+        function Card(obj){
+                return <div style={{margin:'40px',textAlign:'center'}}>
+                    <img src={obj.image} width='150px' height='150px'/>
+                    <h1>{obj.heading}</h1>
+                    <p>{obj.desc}</p>
+                    </div>
+        }
+        function Repeatcards(){
+            return<div style={{display:'flex',justifyContent:'space-evenly'}}>
+                <Card image='https://cdn.pixabay.com/photo/2014/04/03/11/58/rocket-312767__340.png' heading='2,500' desc='enterprise organizations successfully launched'/>
+                <Card image='https://w0.peakpx.com/wallpaper/548/380/HD-wallpaper-anime-landscape-sunset-scenic-windows-stars-anime.jpg' heading='45,000' desc='enterprise users onboarded seamlessly'/>
+                <Card image='https://media.istockphoto.com/id/1062169958/vector/vector-illustration-flat-style-businessmen-discuss-social-network-group-of-people-news.jpg?s=612x612&w=0&k=20&c=eUWibMvbR3UsCQe2tnC6PF06O9SNJHx--wPy2yxd8Pg=' heading='2,00,000+' desc='professionals trained on product and strategy'/>
+                </div>
+        }
+        function Container(){
+            return <div>
+                <Nav/>
+                <Demo/>
+                <Repeatcards/>
+                </div>
+        }
+        ReactDOM.render(<Container/>,document.getElementById('root'))
+    </script>
+</body>
+</html>
